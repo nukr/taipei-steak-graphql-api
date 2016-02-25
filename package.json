@@ -1,0 +1,30 @@
+{
+  "name": "api-boilerplate",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./bin/start",
+    "test": "ava src/__test__"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.11.0",
+    "babel-core": "^6.3.26",
+    "babel-preset-es2015-node5": "^1.1.1",
+    "babel-preset-stage-0": "^6.3.13"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "co-body": "^4.0.0",
+    "graphql": "^0.4.18",
+    "koa": "^2.0.0-alpha.3",
+    "koa-graphiql": "^1.1.0",
+    "koa-router": "^7.0.1",
+    "moment": "^2.11.2",
+    "rethinkdbdash": "^2.2.18"
+  }
+}

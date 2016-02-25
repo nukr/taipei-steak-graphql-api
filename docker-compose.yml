@@ -1,0 +1,4 @@
+api:
+  build: .
+  volumes:
+    - "./src:/opt/app/src"
