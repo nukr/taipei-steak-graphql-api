@@ -15,6 +15,9 @@ export default new GraphQLObjectType({
     },
     count: {
       type: GraphQLInt
+    },
+    pages: {
+      type: GraphQLInt
     }
   })
 })

@@ -11,7 +11,7 @@ const router = new Router()
 const PORT = process.env.PORT || 3000
 
 router.get('/', async (ctx) => {
-  ctx.body = 'hihi'
+  ctx.status = 200
 })
 
 router.post('/graphql', async (ctx) => {
