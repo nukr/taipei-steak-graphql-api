@@ -2,6 +2,7 @@ import { graphql } from 'graphql'
 import Koa from 'koa'
 import Router from 'koa-router'
 import graphiql from 'koa-graphiql'
+import logger from 'koa-logger'
 import bodyParser from 'co-body'
 import schema from './schema'
 
@@ -23,15 +24,10 @@ router.post('/graphql', async (ctx) => {
 })
 
 router.get('/graphiql', graphiql(async (ctx) => {
-  return {
-    url: '/graphql'
-    // query: '',
-    // variables: {
-    //   token: ''
-    // }
-  }
+  return { url: '/graphql' }
 }))
 
+app.use(logger())
 app.use(router.routes())
 app.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`)
