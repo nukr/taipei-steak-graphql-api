@@ -20,7 +20,7 @@ router.post('/graphql', async (ctx) => {
   const rootValue = {
     aa: 11
   }
-  ctx.body = await graphql(schema, query, rootValue, variables)
+  ctx.body = await graphql(schema, query, rootValue, variables ? JSON.parse(variables) : null)
 })
 
 router.get('/graphiql', graphiql(async (ctx) => {
